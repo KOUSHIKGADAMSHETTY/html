@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>ShopEase</h1>
+            <ul>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <section class="product-section">
+            <div class="product" data-id="1" data-name="Smartphone" data-price="299">
+                <img src="phone.jpg" alt="Smartphone">
+                <h2>Smartphone</h2>
+                <p>$299</p>
+                <button onclick="addToCart(1, 'Smartphone', 299)">Shop</button>
+            </div>
+            <div class="product" data-id="2" data-name="Laptop" data-price="899">
+                <img src="laptop.jpg" alt="Laptop">
+                <h2>Laptop</h2>
+                <p>$899</p>
+                <button onclick="addToCart(2, 'Laptop', 899)">Shop</button>
+            </div>
+            <div class="product" data-id="3" data-name="Smartwatch" data-price="199">
+                <img src="smartwatch.jpg" alt="Smartwatch">
+                <h2>Smartwatch</h2>
+                <p>$199</p>
+                <button onclick="addToCart(3, 'Smartwatch', 199)">Shop</button>
+            </div>
+            <div class="product" data-id="4" data-name="Wireless Earbuds" data-price="129">
+                <img src="earbuds.jpg" alt="Wireless Earbuds">
+                <h2>Wireless Earbuds</h2>
+                <p>$129</p>
+                <button onclick="addToCart(4, 'Wireless Earbuds', 129)">Shop</button>
+            </div>
+            <div class="product" data-id="5" data-name="Bluetooth Speaker" data-price="149">
+                <img src="speaker.jpg" alt="Bluetooth Speaker">
+                <h2>Bluetooth Speaker</h2>
+                <p>$149</p>
+                <button onclick="addToCart(5, 'Bluetooth Speaker', 149)">Shop</button>
+            </div>
+            <div class="product" data-id="6" data-name="Gaming Mouse" data-price="49">
+                <img src="mouse.jpg" alt="Gaming Mouse">
+                <h2>Gaming Mouse</h2>
+                <p>$49</p>
+                <button onclick="addToCart(6, 'Gaming Mouse', 49)">Shop</button>
+            </div>
+            <div class="product" data-id="7" data-name="Mechanical Keyboard" data-price="120">
+                <img src="keyboard.jpg" alt="Mechanical Keyboard">
+                <h2>Mechanical Keyboard</h2>
+                <p>$120</p>
+                <button onclick="addToCart(7, 'Mechanical Keyboard', 120)">Shop</button>
+            </div>
+            <div class="product" data-id="8" data-name="External Hard Drive" data-price="85">
+                <img src="harddrive.jpg" alt="External Hard Drive">
+                <h2>External Hard Drive</h2>
+                <p>$85</p>
+                <button onclick="addToCart(8, 'External Hard Drive', 85)">Shop</button>
+            </div>
+        </section>
+        
+        <aside class="cart-section" id="cart">
+            <div class="cart-animation" id="cart-animation"></div>
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0</span></p>
+            <button onclick="clearCart()">Empty Cart</button>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
